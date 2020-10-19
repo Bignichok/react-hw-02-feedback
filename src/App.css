@@ -1,0 +1,8 @@
+@import "https://fonts.googleapis.com/css?family=Bungee+Shade";
+
+.App {
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Bungee Shade", sans-serif;
+}

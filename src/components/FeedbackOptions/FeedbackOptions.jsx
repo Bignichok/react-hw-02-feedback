@@ -1,18 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
+import FeedbackButton from "../FeedbackButton/FeedbackButton";
 
 const FeedbackOptions = ({ onLeaveFeedback }) => {
   return (
     <div>
-      <button type="button" onClick={() => onLeaveFeedback("good")}>
-        Good
-      </button>
-      <button type="button" onClick={() => onLeaveFeedback("neutral")}>
-        Neutral
-      </button>
-      <button type="button" onClick={() => onLeaveFeedback("bad")}>
-        Bad
-      </button>
+      <FeedbackButton type={"Good"} onClick={() => onLeaveFeedback("good")} />
+      <FeedbackButton type={"Neutral"} onClick={() => onLeaveFeedback("neutral")} />
+      <FeedbackButton type={"Bad"} onClick={() => onLeaveFeedback("bad")} />
     </div>
   );
 };
