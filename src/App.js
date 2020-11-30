@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import "./App.css";
+
 import FeedbackOptions from "./components/FeedbackOptions/FeedbackOptions";
 import Section from "./components/Section/Section";
 import Statistics from "./components/Statistics/Statistics";
 import Notification from "./components/Notification/Notification.jsx";
+
+import "./App.css";
 
 class App extends Component {
   state = {
@@ -13,9 +15,9 @@ class App extends Component {
   };
 
   onLeaveFeedback = (type) => {
-    this.setState((state) => {
+    this.setState((prevState) => {
       return {
-        [type]: state[type] + 1,
+        [type]: prevState[type] + 1,
       };
     });
   };
