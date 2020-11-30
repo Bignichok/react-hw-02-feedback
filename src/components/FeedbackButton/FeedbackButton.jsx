@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 const FeedbackButton =({onClick,type})=> {
     return (
-    <button type="button" onClick={onClick} className={`${styles.btn} ${styles.stripedShadow} ${styles.white}`}>
+    <button type="button"  onClick={onClick} className={`${styles.btn} ${styles.stripedShadow} ${styles.white}`}>
         <span>{type}</span>
     </button>
         );

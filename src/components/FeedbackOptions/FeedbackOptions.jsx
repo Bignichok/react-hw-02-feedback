@@ -5,9 +5,9 @@ import FeedbackButton from "../FeedbackButton/FeedbackButton";
 const FeedbackOptions = ({ onLeaveFeedback }) => {
   return (
     <div>
-      <FeedbackButton type={"Good"} onClick={() => onLeaveFeedback("good")} />
-      <FeedbackButton type={"Neutral"} onClick={() => onLeaveFeedback("neutral")} />
-      <FeedbackButton type={"Bad"} onClick={() => onLeaveFeedback("bad")} />
+      <FeedbackButton type={"Good"} onClick={ onLeaveFeedback} />
+      <FeedbackButton type={"Neutral"} onClick={ onLeaveFeedback} />
+      <FeedbackButton type={"Bad"} onClick={ onLeaveFeedback} />
     </div>
   );
 };

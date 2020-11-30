@@ -14,12 +14,12 @@ class App extends Component {
     bad: 0,
   };
 
-  onLeaveFeedback = (type) => {
-    this.setState((prevState) => {
-      return {
-        [type]: prevState[type] + 1,
-      };
-    });
+  onLeaveFeedback = ({ target }) => {
+    const type = target.textContent.toLowerCase();
+
+    this.setState((prevState) => ({
+      [type]: prevState[type] + 1,
+    }));
   };
 
   totalFeedBack = () => {
