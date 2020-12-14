@@ -25,16 +25,13 @@ const App = () => {
       <Section title={"Please leave feedback"}>
         <FeedbackButton
           type={"Good"}
-          onClick={() => setGood((prevState) => prevState + 1)}
+          onClick={() => setGood((prevGood) => prevGood + 1)}
         />
         <FeedbackButton
           type={"Neutral"}
-          onClick={() => setNeutral((prevState) => prevState + 1)}
+          onClick={() => setNeutral((prevNeutral) => prevNeutral + 1)}
         />
-        <FeedbackButton
-          type={"Bad"}
-          onClick={() => setBad((prevState) => prevState + 1)}
-        />
+        <FeedbackButton type={"Bad"} onClick={() => setBad((prevBad) => prevBad + 1)} />
       </Section>
       <Section title={"Statistics"}>
         {totalFeedBack > 0 ? (
