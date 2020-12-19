@@ -1,24 +1,27 @@
-import React from 'react';
-import styles from './FeedbackButton.module.css'
+import React from "react";
 import PropTypes from "prop-types";
+import classNames from "classnames/bind";
 
+import styles from "./FeedbackButton.module.css";
 
-const FeedbackButton =({onClick,type})=> {
-    return (
-    <button type="button"  onClick={onClick} className={`${styles.btn} ${styles.stripedShadow} ${styles.white}`}>
-        <span>{type}</span>
+const cx = classNames.bind(styles);
+
+const FeedbackButton = ({ onClick, type }) => {
+  const className = cx({ btn: true, stripedShadow: true, white: true });
+  return (
+    <button type="button" onClick={onClick} className={className}>
+      <span>{type}</span>
     </button>
-        );
-}
+  );
+};
 
 Notification.propTypes = {
-    onClick: PropTypes.func.isRequired,
-    type:PropTypes.string.isRequired
+  onClick: PropTypes.func.isRequired,
+  type: PropTypes.string.isRequired,
 };
 Notification.defaultProps = {
-    onClick: () => { },
-    type: 'Button'
+  onClick: () => {},
+  type: "Button",
 };
-
 
 export default FeedbackButton;
